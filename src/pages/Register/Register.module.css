@@ -1,0 +1,306 @@
+.registerPage {
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(-45deg, #6d28d9, #7c3aed, #4f46e5, #9333ea);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+/* Floating Background */
+
+.registerPage::before,
+.registerPage::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10px);
+  background: rgba(255,255,255,.12);
+  animation: float 8s ease-in-out infinite;
+}
+
+.registerPage::before{
+  width:280px;
+  height:280px;
+  top:-100px;
+  left:-80px;
+}
+
+.registerPage::after{
+  width:350px;
+  height:350px;
+  right:-120px;
+  bottom:-120px;
+  animation-delay:3s;
+}
+
+/* LEFT SECTION */
+
+.leftSection{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:70px;
+  color:white;
+  position:relative;
+  z-index:2;
+}
+
+.overlay{
+  max-width:520px;
+}
+
+.overlay h1{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.overlay h2{
+  font-size:2.2rem;
+  margin-bottom:20px;
+}
+
+.overlay p{
+  font-size:18px;
+  line-height:1.8;
+  color:rgba(255,255,255,.9);
+}
+
+/* RIGHT SECTION */
+
+.rightSection{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+  position:relative;
+  z-index:2;
+}
+
+/* CARD */
+
+.registerCard{
+  width:100%;
+  max-width:430px;
+
+  background:rgba(255,255,255,.12);
+
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+
+  border-radius:25px;
+
+  border:1px solid rgba(255,255,255,.18);
+
+  padding:40px;
+
+  box-shadow:
+      0 25px 45px rgba(0,0,0,.25),
+      inset 0 1px 1px rgba(255,255,255,.15);
+
+  animation:cardPop .8s ease;
+}
+
+.registerCard h2{
+  color:white;
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.registerCard p{
+  text-align:center;
+  color:rgba(255,255,255,.9);
+  margin-bottom:30px;
+}
+
+
+.registerCard input,
+.registerCard button {
+  width: 100%;
+  height: 54px;
+
+  padding: 0 18px;
+
+  border-radius: 14px;
+
+  box-sizing: border-box;
+
+  font-size: 16px;
+
+  margin-bottom: 18px;
+}
+
+.registerCard input {
+
+  background: rgba(255,255,255,.95);
+
+  color: #1f2937;
+
+  border: 2px solid transparent;
+
+  outline: none;
+
+  transition: all .3s ease;
+
+}
+
+.registerCard input::placeholder{
+
+  color:#6b7280;
+
+}
+
+.registerCard input:focus{
+
+  background:#fff;
+
+  border-color:#a855f7;
+
+  box-shadow:
+      0 0 0 4px rgba(168,85,247,.25);
+
+}
+.registerCard button{
+
+  background:#fff;
+
+  color:#6d28d9;
+
+  border:none;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+.registerCard button:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:0 12px 25px rgba(0,0,0,.2);
+
+}
+
+/* LOGIN LINK */
+
+.loginLink{
+
+  margin-top:25px;
+
+  text-align:center;
+
+  color:rgba(255,255,255,.9);
+
+}
+
+.loginLink span{
+
+  color:white;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+.loginLink span:hover{
+
+  text-decoration:underline;
+
+}
+
+/* Animations */
+
+@keyframes gradientBG{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-30px);
+}
+
+}
+
+@keyframes cardPop{
+
+from{
+opacity:0;
+transform:translateY(40px) scale(.9);
+}
+
+to{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.registerPage{
+flex-direction:column;
+}
+
+.leftSection{
+padding:50px 30px;
+text-align:center;
+}
+
+.overlay h1{
+font-size:2.3rem;
+}
+
+.overlay h2{
+font-size:1.7rem;
+}
+
+.overlay p{
+font-size:16px;
+}
+
+.rightSection{
+padding:20px;
+}
+
+}
+
+@media(max-width:500px){
+
+.registerCard{
+padding:28px;
+}
+
+.registerCard h2{
+font-size:1.7rem;
+}
+
+}

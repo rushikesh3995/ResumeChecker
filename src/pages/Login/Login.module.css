@@ -1,0 +1,260 @@
+
+
+
+
+
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #6d28d9, #7c3aed, #4f46e5, #9333ea);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+/* Floating circles */
+
+.loginContainer::before,
+.loginContainer::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: float 8s ease-in-out infinite;
+}
+
+.loginContainer::before {
+  width: 250px;
+  height: 250px;
+  background: rgba(255,255,255,.12);
+  top: -80px;
+  left: -60px;
+}
+
+.loginContainer::after {
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,.08);
+  bottom: -120px;
+  right: -100px;
+  animation-delay: 3s;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 430px;
+
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,.18);
+
+  border-radius: 24px;
+
+  padding: 40px;
+
+  box-shadow:
+    0 25px 45px rgba(0,0,0,.25),
+    inset 0 1px 1px rgba(255,255,255,.15);
+
+  z-index: 2;
+}
+
+.loginCard h1 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.loginCard p {
+  color: rgba(255,255,255,.9);
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+
+.input {
+  width: 100%;
+  height: 52px;
+  padding: 0 18px;
+
+  margin-bottom: 20px;
+
+  background: rgba(255,255,255,.95);
+  color: #1f2937;
+
+  border: 2px solid transparent;
+  border-radius: 14px;
+
+  outline: none;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  box-sizing: border-box;
+
+  transition: all .3s ease;
+}
+
+.input::placeholder {
+  color: #6b7280;
+}
+
+.input:focus {
+  background: white;
+  border-color: #a855f7;
+  box-shadow:
+      0 0 0 4px rgba(168,85,247,.25),
+      0 10px 20px rgba(0,0,0,.1);
+}
+
+.button {
+  width: 100%;
+  padding: 15px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: white;
+  color: #6d28d9;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .35s;
+
+  margin-bottom: 15px;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 30px rgba(0,0,0,.25);
+}
+
+.button:active {
+  transform: scale(.98);
+}
+
+.button:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.linkText {
+  color: rgba(255,255,255,.9);
+  text-align: center;
+  margin: 18px 0;
+}
+
+.linkText a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.linkText a:hover {
+  text-decoration: underline;
+}
+
+/* Google button */
+
+.button:last-child {
+  background: rgba(255,255,255,.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+.button:last-child:hover {
+  background: rgba(255,255,255,.25);
+}
+
+.label{
+  display:block;
+  color:white;
+  font-weight:600;
+  margin-bottom:0px;
+  margin-left:4px;
+}
+
+.googleButton{
+  width:100%;
+  padding:15px;
+
+  background:white;
+  color:#374151;
+
+  border:none;
+
+  border-radius:14px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  margin-top:15px;
+}
+
+.googleButton:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 30px rgba(0,0,0,.18);
+
+}
+
+/* Animations */
+
+@keyframes gradientBG {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+
+}
+
+/* Mobile */
+
+@media(max-width:500px){
+
+.loginCard{
+    padding:28px;
+}
+
+.loginCard h1{
+    font-size:1.7rem;
+}
+
+}

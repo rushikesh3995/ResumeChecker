@@ -1,0 +1,480 @@
+
+
+
+
+.pricing{
+
+    min-height:100vh;
+
+    padding:100px 8%;
+
+    background:linear-gradient(135deg,#f8f5ff,#eef2ff);
+
+}
+
+.heading{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    background:#ede9fe;
+
+    color:#6d28d9;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.heading h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    color:#1f2937;
+
+}
+
+.heading p{
+
+    color:#6b7280;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.cards{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+.card{
+
+    width:360px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.popular{
+
+    border:3px solid #7c3aed;
+
+    transform:scale(1.05);
+
+}
+
+.popularBadge{
+
+    position:absolute;
+
+    top:-15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#7c3aed;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.card h2{
+
+    font-size:30px;
+
+    text-align:center;
+
+    color:#1f2937;
+
+}
+
+.card h1{
+
+    text-align:center;
+
+    color:#6d28d9;
+
+    font-size:52px;
+
+    margin:20px 0;
+
+}
+
+.card p{
+
+    text-align:center;
+
+    color:#6b7280;
+
+    margin-bottom:30px;
+
+}
+
+.card ul{
+    list-style:none;
+    padding:0;
+    margin:30px 0;
+}
+.card li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+    font-size:16px;
+
+    line-height:1.5;
+
+    color:#374151;
+
+}
+.card li span{
+    flex:1;
+}
+
+.icon{
+
+    color:#22c55e;
+
+    font-size:18px;
+
+}
+
+
+.priceBox{
+display:flex;
+justify-content:center;
+align-items:flex-end;
+margin:20px 0;
+}
+
+.currency{
+font-size:2rem;
+font-weight:700;
+color:#7c3aed;
+}
+
+.amount{
+font-size:4rem;
+font-weight:800;
+color:#7c3aed;
+line-height:1;
+}
+
+.month{
+margin-left:6px;
+font-size:16px;
+color:#777;
+margin-bottom:8px;
+}
+
+.secure{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+margin-top:18px;
+color:#666;
+font-size:14px;
+font-weight:600;
+}
+
+.loader{
+width:55px;
+height:55px;
+border:5px solid #ddd;
+border-top:5px solid #7c3aed;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin-bottom:20px;
+}
+
+.loadingSection{
+height:70vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+@media(max-width:900px){
+
+.cards{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.heading h1{
+
+font-size:2.3rem;
+
+}
+
+.card{
+
+width:100%;
+
+max-width:400px;
+
+}
+
+.popular{
+
+transform:none;
+
+}
+
+}
+
+/* =========================
+   Tablet (992px)
+========================= */
+@media (max-width: 992px) {
+
+  .pricing {
+    padding: 80px 6%;
+  }
+
+  .cards {
+    gap: 25px;
+  }
+
+  .card {
+    width: 320px;
+    padding: 35px;
+  }
+
+  .heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .amount {
+    font-size: 3.5rem;
+  }
+}
+
+/* =========================
+   Mobile (768px)
+========================= */
+@media (max-width: 768px) {
+
+  .pricing {
+    padding: 70px 20px;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .heading p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 50px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+  }
+
+  .popular {
+    transform: none;
+  }
+
+  .card h2 {
+    font-size: 26px;
+  }
+
+  .amount {
+    font-size: 3rem;
+  }
+
+  .currency {
+    font-size: 1.8rem;
+  }
+
+  .month {
+    font-size: 14px;
+  }
+
+  .card li {
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width:768px){
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+    }
+
+    .card{
+        width:100%;
+        max-width:360px;
+        padding:28px 22px;
+        box-sizing:border-box;
+    }
+
+    .popular{
+        transform:none;
+    }
+
+}
+
+/* =========================
+   Small Mobile (480px)
+========================= */
+@media (max-width: 480px) {
+
+  .pricing {
+    padding: 60px 15px;
+  }
+
+  .badge {
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+
+  .heading h1 {
+    font-size: 1.7rem;
+  }
+
+  .heading p {
+    font-size: 15px;
+  }
+
+  .card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+  }
+
+  .amount {
+    font-size: 2.5rem;
+  }
+
+  .currency {
+    font-size: 1.5rem;
+  }
+
+  .month {
+    font-size: 13px;
+  }
+
+  .card li {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .popularBadge {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+
+  .secure {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .loader {
+    width: 45px;
+    height: 45px;
+    border-width: 4px;
+  }
+}
+
+@media screen and (max-width:480px){
+
+    .card{
+        width:100%;
+        max-width:100%;
+        padding:22px 18px;
+    }
+
+}

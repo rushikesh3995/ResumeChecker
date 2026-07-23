@@ -1,0 +1,25 @@
+**/node_modules/
+**/.env
+**/dist/
+*.log
+
+
+
+
+
+
+
+# Dependencies
+**/node_modules/
+
+# Environment
+**/.env
+
+# Firebase Service Account
+Backend/server/config/serviceAccountKey.json
+
+# Uploaded files
+Backend/server/uploads/
+
+# Build
+**/dist/

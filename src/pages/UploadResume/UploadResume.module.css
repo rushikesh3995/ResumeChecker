@@ -1,0 +1,51 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8fafc;
+}
+
+.card {
+  width: 500px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  text-align: center;
+}
+
+.card h1 {
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #6b7280;
+}
+
+input {
+  margin: 30px 0;
+}
+
+.fileInfo {
+  background: #f3f4f6;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: #7C3AED;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  opacity: .9;
+}

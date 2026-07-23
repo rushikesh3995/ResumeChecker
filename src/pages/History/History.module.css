@@ -1,0 +1,27 @@
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+
+.card h2 {
+  color: #7c3aed;
+}
+
+.card ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}

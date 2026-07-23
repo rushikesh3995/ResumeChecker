@@ -1,0 +1,201 @@
+/* .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background: #111827;
+    color: white;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar{
+animation:slideDown .8s ease;
+}
+
+@keyframes slideDown{
+
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navLinks li {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.navLinks li:hover {
+    color: #8B5CF6;
+} */
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background: #111827;
+    color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    animation: slideDown .8s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navLinks li {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.navLinks li:hover {
+    color: #8B5CF6;
+}
+
+.menuIcon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.userBadge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: default;
+    font-weight: 600;
+}
+
+.userBadge:hover {
+    color: white !important;
+}
+
+.roleTag {
+    background: #8B5CF6;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+.logoutLink {
+    color: #f87171;
+    font-weight: 600;
+}
+
+.logoutLink:hover {
+    color: #ef4444 !important;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+
+    .navbar {
+        padding: 20px 35px;
+    }
+
+    .navLinks {
+        gap: 25px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 20px;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .navLinks {
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: #111827;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+
+        padding: 25px 0;
+
+        display: none;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+}
