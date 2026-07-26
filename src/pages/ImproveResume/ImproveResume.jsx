@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styles from "./ImproveResume.module.css";
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
 function ImproveResume() {
   const [loading, setLoading] = useState(false);
   const [improvedResume, setImprovedResume] = useState("");
@@ -13,7 +15,7 @@ function ImproveResume() {
         localStorage.getItem("resumeAnalysis")
       );
 
-      const response = await fetch("http://localhost:5000/api/improve", {
+      const response = await fetch("${API_BASE}/api/improve", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
