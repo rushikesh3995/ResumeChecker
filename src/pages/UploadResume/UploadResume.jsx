@@ -4,6 +4,7 @@
 
 
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -96,7 +97,7 @@ function UploadResume() {
       const token = await auth.currentUser.getIdToken();
 
 const response = await axios.post(
-  "http://localhost:5000/api/upload",
+  "${API_BASE}/api/upload",
   formData,
   {
     headers: {
