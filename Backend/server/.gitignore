@@ -6,9 +6,6 @@
 
 
 
-
-
-
 # Dependencies
 **/node_modules/
 
@@ -17,9 +14,12 @@
 
 # Firebase Service Account
 Backend/server/config/serviceAccountKey.json
+Backend/server/config/serviceAccountKey.json.json
 
 # Uploaded files
 Backend/server/uploads/
 
 # Build
 **/dist/
+
+
