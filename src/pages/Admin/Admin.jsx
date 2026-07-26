@@ -5,7 +5,8 @@ import { doc, getDoc } from "firebase/firestore";
 import { auth, db } from "../../firebase/firebase";
 import styles from "./Admin.module.css";
 
-const API_BASE = "http://localhost:5000/api";
+// const API_BASE = "http://localhost:5000/api";
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 function Admin() {
   const navigate = useNavigate();
