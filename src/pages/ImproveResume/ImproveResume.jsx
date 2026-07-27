@@ -1,7 +1,16 @@
+// import { useState } from "react";
+// import styles from "./ImproveResume.module.css";
+
+// const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
 import { useState } from "react";
 import styles from "./ImproveResume.module.css";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL;
+const API_BASE = import.meta.env.VITE_API_BASE_URL
+  ? `${import.meta.env.VITE_API_BASE_URL}/api`
+  : "http://localhost:5000/api";
+
+function ImproveResume() {
 
 function ImproveResume() {
   const [loading, setLoading] = useState(false);
@@ -15,7 +24,8 @@ function ImproveResume() {
         localStorage.getItem("resumeAnalysis")
       );
 
-      const response = await fetch("${API_BASE}/api/improve", {
+      // const response = await fetch("${API_BASE}/api/improve"
+      const response = await fetch(`${API_BASE}/improve`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
