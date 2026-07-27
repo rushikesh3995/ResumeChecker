@@ -1,11 +1,3 @@
-
-
-
-
-
-
-const API_BASE = import.meta.env.VITE_API_BASE_URL;
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -56,7 +48,6 @@ function UploadResume() {
     try {
       setLoading(true);
 
-      // Check logged in user
       const currentUser = auth.currentUser;
 
       if (!currentUser) {
@@ -65,7 +56,6 @@ function UploadResume() {
         return;
       }
 
-      // Get user document
       const userRef = doc(db, "users", currentUser.uid);
       const userSnap = await getDoc(userRef);
 
@@ -76,7 +66,6 @@ function UploadResume() {
 
       const userData = userSnap.data();
 
-      // Check resume limit
       if (userData.resumeCount >= userData.maxResume) {
         alert(
           `Resume limit reached!\n\nUsed: ${userData.resumeCount}/${userData.maxResume}`
@@ -84,46 +73,29 @@ function UploadResume() {
         return;
       }
 
-      // Upload Resume
       const formData = new FormData();
       formData.append("resume", file);
 
-      // const response = await axios.post(
-      //   "http://localhost:5000/api/upload",
-      //   formData,
-      //   {
-      //     headers: {
-      //       "Content-Type": "multipart/form-data",
-      //     },
-      //   }
-      // );
-
       const token = await auth.currentUser.getIdToken();
 
-// const response = await axios.post(
-//   "${API_BASE}/api/upload",
-//   formData,
       const response = await axios.post(
-  `${API_BASE}/upload`,
-  formData,
-  {
-  {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "multipart/form-data",
-    },
-  }
-);
+        `${API_BASE}/upload`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
       console.log(response.data);
 
-      // Save AI Analysis
       localStorage.setItem(
         "resumeAnalysis",
         JSON.stringify(response.data.analysis)
       );
 
-      // Increase Resume Count
       await updateDoc(userRef, {
         resumeCount: increment(1),
       });
@@ -131,7 +103,6 @@ function UploadResume() {
       alert("Resume analyzed successfully!");
 
       navigate("/dashboard");
-
     } catch (error) {
       console.error(error);
 
@@ -140,7 +111,6 @@ function UploadResume() {
       } else {
         alert("Server not responding.");
       }
-
     } finally {
       setLoading(false);
     }
@@ -155,23 +125,16 @@ function UploadResume() {
           Upload your PDF or DOCX resume and get an AI-powered ATS analysis.
         </p>
 
-        <input
-          type="file"
-          accept=".pdf,.docx"
-          onChange={handleFileChange}
-        />
+        <input type="file" accept=".pdf,.docx" onChange={handleFileChange} />
 
         {file && (
           <div className={styles.fileInfo}>
             <h3>Selected Resume</h3>
-
             <p>
               <strong>Name:</strong> {file.name}
             </p>
-
             <p>
-              <strong>Size:</strong>{" "}
-              {(file.size / 1024).toFixed(2)} KB
+              <strong>Size:</strong> {(file.size / 1024).toFixed(2)} KB
             </p>
           </div>
         )}
