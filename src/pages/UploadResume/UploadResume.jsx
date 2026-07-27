@@ -100,9 +100,13 @@ function UploadResume() {
 
       const token = await auth.currentUser.getIdToken();
 
-const response = await axios.post(
-  "${API_BASE}/api/upload",
+// const response = await axios.post(
+//   "${API_BASE}/api/upload",
+//   formData,
+      const response = await axios.post(
+  `${API_BASE}/upload`,
   formData,
+  {
   {
     headers: {
       Authorization: `Bearer ${token}`,
