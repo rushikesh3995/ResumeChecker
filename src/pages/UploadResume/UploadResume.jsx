@@ -19,6 +19,10 @@ import {
   increment,
 } from "firebase/firestore";
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL
+  ? `${import.meta.env.VITE_API_BASE_URL}/api`
+  : "http://localhost:5000/api";
+
 function UploadResume() {
   const navigate = useNavigate();
 
