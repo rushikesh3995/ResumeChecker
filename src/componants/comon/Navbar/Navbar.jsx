@@ -73,6 +73,7 @@ function Navbar() {
             <li onClick={() => goTo("/dashboard")}>Dashboard</li>
             <li onClick={() => goTo("/upload")}>Upload</li>
             <li onClick={() => goTo("/history")}>History</li>
+            <li onClick={() => goTo("/mock-interview")}>AI Interview</li>
           </>
         )}
 

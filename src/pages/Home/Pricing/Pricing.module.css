@@ -1,434 +1,472 @@
 
+/* =========================================
+   PRICING SECTION
+========================================= */
 
-
-
-.pricing{
-
-    min-height:100vh;
-
-    padding:100px 8%;
-
-    background:linear-gradient(135deg,#f8f5ff,#eef2ff);
-
+.pricing {
+  min-height: 100vh;
+  padding: 100px 8%;
+  background: linear-gradient(135deg, #f8f7ff, #eef2ff);
+  box-sizing: border-box;
 }
 
-.heading{
+/* =========================================
+   SECTION HEADING
+========================================= */
 
-    text-align:center;
-
-    max-width:700px;
-
-    margin:auto;
-
+.heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-.badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    padding:10px 20px;
-
-    border-radius:30px;
-
-    background:#ede9fe;
-
-    color:#6d28d9;
-
-    font-weight:600;
-
-    margin-bottom:20px;
-
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 22px;
 }
 
-.heading h1{
-
-    font-size:3rem;
-
-    margin-bottom:20px;
-
-    color:#1f2937;
-
+.heading h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 0 0 20px;
+  color: #172033;
+  letter-spacing: -1.5px;
 }
 
-.heading p{
-
-    color:#6b7280;
-
-    font-size:18px;
-
-    line-height:1.8;
-
+.heading h1 span {
+  color: #7c3aed;
 }
 
-.cards{
-
-    margin-top:70px;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:40px;
-
-    flex-wrap:wrap;
-
+.heading p {
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 620px;
 }
 
+/* =========================================
+   PRICING CARDS CONTAINER
+========================================= */
 
-
-
-.card{
-
-    width:360px;
-
-    background:white;
-
-    border-radius:24px;
-
-    padding:40px;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.08);
-
-    transition:.35s;
-
-    position:relative;
-
+.cards {
+  margin: 75px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
 }
 
-.card:hover{
+/* =========================================
+   INDIVIDUAL PRICING CARD
+========================================= */
 
-    transform:translateY(-12px);
+.card {
+  width: 340px;
+  max-width: 100%;
+  min-height: 480px;
+  padding: 38px 32px;
+  box-sizing: border-box;
 
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+
+  box-shadow: 0 12px 35px rgba(31, 41, 55, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.popular{
-
-    border:3px solid #7c3aed;
-
-    transform:scale(1.05);
-
+.card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 22px 45px rgba(91, 33, 182, 0.12);
+  border-color: #c4b5fd;
 }
 
-.popularBadge{
-
-    position:absolute;
-
-    top:-15px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    background:#7c3aed;
-
-    color:white;
-
-    padding:8px 18px;
-
-    border-radius:20px;
-
-    font-size:14px;
-
-    font-weight:600;
-
+.card h2 {
+  font-size: 26px;
+  font-weight: 750;
+  text-align: center;
+  color: #1e293b;
+  margin: 12px 0;
 }
 
-.card h2{
+/* =========================================
+   POPULAR / PREMIUM CARD
+========================================= */
 
-    font-size:30px;
-
-    text-align:center;
-
-    color:#1f2937;
-
+.popular {
+  border: 2px solid #7c3aed;
+  box-shadow: 0 18px 45px rgba(124, 58, 237, 0.13);
+  transform: translateY(-8px);
 }
 
-.card h1{
-
-    text-align:center;
-
-    color:#6d28d9;
-
-    font-size:52px;
-
-    margin:20px 0;
-
+.popular:hover {
+  transform: translateY(-16px);
 }
 
-.card p{
+.popularBadge {
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
 
-    text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
 
-    color:#6b7280;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  color: #ffffff;
 
-    margin-bottom:30px;
+  padding: 9px 20px;
+  border-radius: 30px;
+  white-space: nowrap;
 
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
 }
 
-.card ul{
-    list-style:none;
-    padding:0;
-    margin:30px 0;
-}
-.card li{
+/* =========================================
+   PRICE DISPLAY
+========================================= */
 
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:12px;
-
-    margin-bottom:18px;
-
-    font-size:16px;
-
-    line-height:1.5;
-
-    color:#374151;
-
-}
-.card li span{
-    flex:1;
+.priceBox {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 24px 0;
 }
 
-.icon{
-
-    color:#22c55e;
-
-    font-size:18px;
-
+.currency {
+  font-size: 28px;
+  font-weight: 700;
+  color: #7c3aed;
+  margin-right: 4px;
+  margin-bottom: 7px;
 }
 
-
-.priceBox{
-display:flex;
-justify-content:center;
-align-items:flex-end;
-margin:20px 0;
+.amount {
+  font-size: 58px;
+  font-weight: 800;
+  color: #6d28d9;
+  line-height: 1;
+  letter-spacing: -2px;
 }
 
-.currency{
-font-size:2rem;
-font-weight:700;
-color:#7c3aed;
+.month {
+  margin-left: 7px;
+  margin-bottom: 7px;
+  font-size: 15px;
+  color: #64748b;
 }
 
-.amount{
-font-size:4rem;
-font-weight:800;
-color:#7c3aed;
-line-height:1;
+/* =========================================
+   PLAN DESCRIPTION
+========================================= */
+
+.description {
+  text-align: center;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 52px;
+  margin: 0 0 15px;
 }
 
-.month{
-margin-left:6px;
-font-size:16px;
-color:#777;
-margin-bottom:8px;
+/* =========================================
+   FEATURES
+========================================= */
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 28px;
+  flex-grow: 1;
 }
 
-.secure{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:8px;
-margin-top:18px;
-color:#666;
-font-size:14px;
-font-weight:600;
+.card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 17px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #374151;
 }
 
-.loader{
-width:55px;
-height:55px;
-border:5px solid #ddd;
-border-top:5px solid #7c3aed;
-border-radius:50%;
-animation:spin 1s linear infinite;
-margin-bottom:20px;
+.card li span {
+  flex: 1;
 }
 
-.loadingSection{
-height:70vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+.icon {
+  color: #16a34a;
+  font-size: 17px;
+  margin-top: 3px;
+  flex-shrink: 0;
 }
 
-@keyframes spin{
-100%{
-transform:rotate(360deg);
-}
-}
+/* =========================================
+   BUTTON
+========================================= */
 
-@media(max-width:900px){
-
-.cards{
-
-flex-direction:column;
-
-align-items:center;
-
+.cardAction {
+  width: 100%;
+  margin-top: auto;
 }
 
-.heading h1{
-
-font-size:2.3rem;
-
+.cardAction button {
+  width: 100%;
 }
 
-.card{
+/* =========================================
+   SECURE PAYMENT
+========================================= */
 
-width:100%;
-
-max-width:400px;
-
+.secure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 19px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
 }
 
-.popular{
+/* =========================================
+   LOADING STATE
+========================================= */
 
-transform:none;
-
+.loadingSection {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 30px;
+  text-align: center;
 }
 
+.loadingSection h2 {
+  color: #1e293b;
+  font-size: 22px;
+  margin: 5px 0;
 }
 
-/* =========================
-   Tablet (992px)
-========================= */
+.loadingSection p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
+.loader {
+  width: 52px;
+  height: 52px;
+  border: 5px solid #e5e7eb;
+  border-top-color: #7c3aed;
+  border-radius: 50%;
+  animation: pricingSpin 0.8s linear infinite;
+}
+
+@keyframes pricingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   ERROR AND EMPTY STATES
+========================================= */
+
+.errorState,
+.emptyState {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  gap: 14px;
+}
+
+.errorState > svg,
+.emptyState > svg {
+  font-size: 42px;
+  color: #7c3aed;
+}
+
+.errorState h2,
+.emptyState h2 {
+  font-size: 25px;
+  color: #1e293b;
+  margin: 0;
+}
+
+.errorState p,
+.emptyState p {
+  max-width: 500px;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.retryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 9px;
+  background: #6d28d9;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.retryButton:hover {
+  background: #5b21b6;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
 @media (max-width: 992px) {
-
   .pricing {
-    padding: 80px 6%;
+    padding: 80px 5%;
   }
 
   .cards {
     gap: 25px;
+    margin-top: 60px;
   }
 
   .card {
     width: 320px;
-    padding: 35px;
-  }
-
-  .heading h1 {
-    font-size: 2.5rem;
-  }
-
-  .amount {
-    font-size: 3.5rem;
-  }
-}
-
-/* =========================
-   Mobile (768px)
-========================= */
-@media (max-width: 768px) {
-
-  .pricing {
-    padding: 70px 20px;
-  }
-
-  .heading h1 {
-    font-size: 2rem;
-    line-height: 1.3;
-  }
-
-  .heading p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    margin-top: 50px;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 400px;
-    padding: 30px;
+    padding: 35px 26px;
   }
 
   .popular {
     transform: none;
   }
 
+  .popular:hover {
+    transform: translateY(-8px);
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .pricing {
+    padding: 70px 20px;
+  }
+
+  .heading h1 {
+    font-size: 2.1rem;
+    letter-spacing: -0.8px;
+  }
+
+  .heading p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    margin-top: 55px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+    min-height: 450px;
+    padding: 32px 25px;
+  }
+
+  .popular {
+    transform: none;
+  }
+
+  .popular:hover {
+    transform: translateY(-7px);
+  }
+
   .card h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .amount {
-    font-size: 3rem;
+    font-size: 50px;
   }
 
   .currency {
-    font-size: 1.8rem;
-  }
-
-  .month {
-    font-size: 14px;
-  }
-
-  .card li {
-    font-size: 15px;
+    font-size: 25px;
   }
 }
 
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
-@media screen and (max-width:768px){
-
-    .cards{
-        flex-direction:column;
-        align-items:center;
-        gap:25px;
-    }
-
-    .card{
-        width:100%;
-        max-width:360px;
-        padding:28px 22px;
-        box-sizing:border-box;
-    }
-
-    .popular{
-        transform:none;
-    }
-
-}
-
-/* =========================
-   Small Mobile (480px)
-========================= */
 @media (max-width: 480px) {
-
   .pricing {
     padding: 60px 15px;
   }
 
   .badge {
-    font-size: 13px;
     padding: 8px 15px;
+    font-size: 13px;
   }
 
   .heading h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   .heading p {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .cards {
+    gap: 32px;
+    margin-top: 45px;
   }
 
   .card {
-    padding: 22px;
+    padding: 28px 20px;
     border-radius: 18px;
+    min-height: 420px;
   }
 
   .card h2 {
@@ -436,11 +474,11 @@ transform:none;
   }
 
   .amount {
-    font-size: 2.5rem;
+    font-size: 43px;
   }
 
   .currency {
-    font-size: 1.5rem;
+    font-size: 22px;
   }
 
   .month {
@@ -454,27 +492,25 @@ transform:none;
 
   .popularBadge {
     font-size: 12px;
-    padding: 6px 14px;
+    padding: 7px 15px;
   }
 
   .secure {
-    font-size: 13px;
-    text-align: center;
-  }
-
-  .loader {
-    width: 45px;
-    height: 45px;
-    border-width: 4px;
+    font-size: 12px;
   }
 }
 
-@media screen and (max-width:480px){
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
 
-    .card{
-        width:100%;
-        max-width:100%;
-        padding:22px 18px;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .retryButton {
+    transition: none;
+  }
 
+  .loader {
+    animation-duration: 2s;
+  }
 }

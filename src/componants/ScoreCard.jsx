@@ -29,9 +29,9 @@ function ScoreCard({ score }) {
           value={score}
           text={`${score}%`}
           styles={buildStyles({
-            textColor: "#fff",
+            textColor: "#263650",
             pathColor: color,
-            trailColor: "#2d3748",
+            trailColor: "#e5eaf2",
           })}
         />
       </div>
