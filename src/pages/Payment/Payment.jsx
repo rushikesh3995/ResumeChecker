@@ -5,7 +5,10 @@ import { auth } from "../../firebase/firebase";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE = "http://localhost:5000/api";
+// const API_BASE = "http://localhost:5000/api";
+const ENV_API_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+
+const API_BASE = `${ENV_API_URL.replace(/\/+$/, "").replace(/\/api$/i, "")}/api`;
 
 function Payment() {
   const [image, setImage] = useState(null);
