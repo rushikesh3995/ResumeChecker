@@ -1257,3 +1257,66 @@
     gap: 8px;
   }
 }
+
+/* FINAL MOBILE DASHBOARD FIX */
+
+@media (max-width: 600px) {
+
+  .page,
+  .page * {
+    box-sizing: border-box;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .main {
+    width: 100%;
+    min-width: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Two statistic cards per row */
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    min-width: 0;
+  }
+
+  .statCard {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .contentGrid,
+  .primaryColumn,
+  .rightColumn,
+  .latestPanel {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .latestContent {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reportGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reportCard {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .statsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
